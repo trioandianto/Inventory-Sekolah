@@ -17,6 +17,7 @@ namespace BS.Inventory.App
         public static List<TeacherTable> getTeacherTableDummy() {
             List<TeacherTable> teacherTableDummies = new List<TeacherTable>();
 
+            // 3 Teacher table
             TeacherTable newTeacherTable = new TeacherTable(1, "Meja Standar", new Point(1.5, 0.7));
             teacherTableDummies.Add(newTeacherTable);
 
@@ -28,6 +29,8 @@ namespace BS.Inventory.App
 
         public static List<StudentTable> getStudentTableDummy() {
             List<StudentTable> studentTableDummies = new List<StudentTable>();
+
+            // 15 Student Table
 
 
             return studentTableDummies;
