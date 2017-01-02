@@ -9,6 +9,10 @@ namespace BS.Inventory.App
 {
     class Seat : IInventory
     {
+
+        public string name { get; set; }
+        public char iconString { get; set; }
+
         private DateTime _buyDate;
         public DateTime buyDate
         {
@@ -47,8 +51,8 @@ namespace BS.Inventory.App
 
             set
             {                
-                value.X = Math.Ceiling(value.X);
-                value.Y = Math.Ceiling(value.Y);
+                value.X = Math.Round(value.X, 1);
+                value.Y = Math.Round(value.Y, 1);
                 this._largeMeter = value;
             }
         }

@@ -9,10 +9,12 @@ namespace BS.Inventory.App
 {
     interface IInventory
     {
-        string iID { get; set; }
+        string iID { get; set; }       
+        string name { get; set; }
         int warrant { get; set; }
         DateTime buyDate { get; set; }
         Point largeMeter { get; set; }
+        char iconString { get; set; }
 
     }
 }

@@ -8,5 +8,11 @@ namespace BS.Inventory.App
 {
     class StudentTable : Table
     {
+        protected const string suffixID = "STD";
+        public StudentTable(int iID, char iconString = '=') : base(iID, iconString) {
+            this.iID = string.Concat(this.iID, suffixID);
+        }
+
+
     }
 }

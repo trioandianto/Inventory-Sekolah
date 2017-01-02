@@ -9,6 +9,15 @@ namespace BS.Inventory.App
 {
     class Table : IInventory
     {
+        protected const string prefixID = "Tbl";
+        public Table(int iID, char iconString = '=') {
+            this.iID = string.Concat(prefixID, iID);
+
+            this.iconString = iconString;
+        }
+
+        public string name { get;set;}
+
         private DateTime _buyDate;
         public DateTime buyDate
         {
@@ -47,8 +56,8 @@ namespace BS.Inventory.App
 
             set
             {
-                value.X = Math.Ceiling(value.X);
-                value.Y = Math.Ceiling(value.Y);
+                value.X = Math.Round(value.X, 1);
+                value.Y = Math.Round(value.Y, 1);
                 this._largeMeter = value;
             }
         }
@@ -66,5 +75,7 @@ namespace BS.Inventory.App
                 this._warrant = value;
             }
         }
+
+        public char iconString { get; set; }
     }
 }
