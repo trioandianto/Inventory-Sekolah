@@ -9,6 +9,7 @@ namespace BS.Inventory.App
     class Program
     {
         static void Main(string[] args) {
+
         }
     }
 }

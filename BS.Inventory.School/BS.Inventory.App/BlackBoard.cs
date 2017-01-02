@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BS.Inventory.App
 {
-    class BlackBoard : IInventory, IClassBoard
+    class BlackBoard //: IInventory, IClassBoard
     {
     }
 }
