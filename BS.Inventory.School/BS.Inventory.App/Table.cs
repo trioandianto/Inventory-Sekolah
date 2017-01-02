@@ -10,9 +10,10 @@ namespace BS.Inventory.App
     class Table : IInventory
     {
         protected const string prefixID = "Tbl";
-        public Table(int iID, char iconString = '=') {
+        public Table(int iID, string name, Point largeMeter, char iconString = '=') {
             this.iID = string.Concat(prefixID, iID);
-
+            this.name = name;
+            this.largeMeter = largeMeter;
             this.iconString = iconString;
         }
 
