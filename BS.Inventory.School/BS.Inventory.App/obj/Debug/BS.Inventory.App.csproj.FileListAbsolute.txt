@@ -1,0 +1,2 @@
+C:\Users\Abyor\Documents\Visual Studio 2015\Projects\BS.Inventory.School\BS.Inventory.App\bin\Debug\BS.Inventory.App.exe.config
+C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.App\bin\Debug\BS.Inventory.App.exe.config
