@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BS.Inventory.App
 {
@@ -36,8 +37,8 @@ namespace BS.Inventory.App
             }
         }
 
-        private decimal _largeMeter;
-        public decimal largeMeter
+        private Point _largeMeter;
+        public Point largeMeter
         {
             get
             {
@@ -46,6 +47,8 @@ namespace BS.Inventory.App
 
             set
             {
+                value.X = Math.Ceiling(value.X);
+                value.Y = Math.Ceiling(value.Y);
                 this._largeMeter = value;
             }
         }

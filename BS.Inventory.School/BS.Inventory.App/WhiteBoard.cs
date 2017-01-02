@@ -8,5 +8,6 @@ namespace BS.Inventory.App
 {
     class WhiteBoard : IInventory, IClassBoard
     {
+
     }
 }
