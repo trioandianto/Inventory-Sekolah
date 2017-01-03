@@ -14,6 +14,7 @@ namespace BS.Inventory.App
             this.iID = string.Concat(this.iID, suffixID);
         }
 
+        public int chairSlot { get; set; }
 
     }
 }
