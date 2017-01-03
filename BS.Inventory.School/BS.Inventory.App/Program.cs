@@ -31,6 +31,29 @@ namespace BS.Inventory.App
             List<StudentTable> studentTableDummies = new List<StudentTable>();
 
             // 15 Student Table
+            StudentTable newStudentTable = new StudentTable(1,"Maulana",new Point(0.7,0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Trio", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Kiki", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Satria", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Ucu", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Sofy", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Tiara", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+
+            newStudentTable = new StudentTable(1, "Dhany", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
 
 
             return studentTableDummies;
