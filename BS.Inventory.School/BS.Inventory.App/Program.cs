@@ -37,25 +37,46 @@ namespace BS.Inventory.App
             StudentTable newStudentTable = new StudentTable(1,"Maulana",new Point(0.7,0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Trio", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(2, "Trio", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Kiki", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(3, "Kiki", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Satria", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(4, "Satria", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Ucu", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(5, "Ucu", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Sofy", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(6, "Sofy", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Tiara", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(7, "Tiara", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
-            newStudentTable = new StudentTable(1, "Dhany", new Point(0.7, 0.7));
+            newStudentTable = new StudentTable(8, "Dhany", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(9, "Husain", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(10, "Agung", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(11, "Dwi", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(12, "Egi", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(13, "Anggi", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(14, "Tsany", new Point(0.7, 0.7));
+            studentTableDummies.Add(newStudentTable);
+            
+            newStudentTable = new StudentTable(15, "Angga", new Point(0.7, 0.7));
             studentTableDummies.Add(newStudentTable);
 
 
