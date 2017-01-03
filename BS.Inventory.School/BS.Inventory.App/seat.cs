@@ -9,6 +9,13 @@ namespace BS.Inventory.App
 {
     class Seat : IInventory
     {
+        protected const string prefixID = "SEA";
+        public Seat(int iID, string name, Point largeMeter, char iconString = '*') {
+            this.iID = string.Concat(prefixID, iID);
+            this.name = name;
+            this.largeMeter = largeMeter;
+            this.iconString = iconString;
+        }
 
         public string name { get; set; }
         public char iconString { get; set; }
@@ -70,5 +77,7 @@ namespace BS.Inventory.App
                 this._warrant = value;
             }
         }
+
+        public int itemCount { get; set; }
     }
 }

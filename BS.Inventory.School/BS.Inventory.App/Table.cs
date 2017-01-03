@@ -78,5 +78,7 @@ namespace BS.Inventory.App
         }
 
         public char iconString { get; set; }
+
+        public int itemCount { get; set; }
     }
 }

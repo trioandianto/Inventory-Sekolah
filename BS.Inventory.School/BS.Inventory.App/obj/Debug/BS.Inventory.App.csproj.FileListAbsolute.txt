@@ -4,3 +4,4 @@ C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.A
 C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.App\bin\Debug\BS.Inventory.App.pdb
 C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.App\obj\Debug\BS.Inventory.App.exe
 C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.App\obj\Debug\BS.Inventory.App.pdb
+C:\Users\Abyor\Source\Repos\Inventory-Sekolah\BS.Inventory.School\BS.Inventory.App\obj\Debug\BS.Inventory.App.csprojResolveAssemblyReference.cache
