@@ -268,6 +268,14 @@ namespace BS.Inventory.App
             newStudentTable.itemCount = 10;
             newStudentTable.chairSlot = 2;
 
+            newStudentTable = new StudentTable(2, "Meja murid kertas", new Point(1, 0.7));
+            newStudentTable.itemCount = 10;
+            newStudentTable.chairSlot = 2;
+
+            newStudentTable = new StudentTable(3, "Meja murid bambu", new Point(1, 0.7));
+            newStudentTable.itemCount = 10;
+            newStudentTable.chairSlot = 1;
+
             return newStudentTable;
         }
 
