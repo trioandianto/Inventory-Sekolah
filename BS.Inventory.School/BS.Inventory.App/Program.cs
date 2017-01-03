@@ -23,6 +23,7 @@ namespace BS.Inventory.App
 
             // Hardcode
             studentTableMaster.Add(getStudentTableDummy());
+            seatMaster.Add(getSeatDummy());
 
             Console.WriteLine("==============================================================");
             Console.WriteLine("Pilihan menu");
@@ -98,7 +99,9 @@ namespace BS.Inventory.App
             int maxCapacity;
 
             int tableCount;
-            int seatCount;            
+            int seatCount;
+
+            string inputUser;
 
             if (studentTable.Count != 0 || seat.Count != 0) {
                 if (currClassroom != null) {
@@ -107,10 +110,12 @@ namespace BS.Inventory.App
                     foreach(StudentTable item in studentTable) {
                         Console.WriteLine(item.name);
                     }
-                    currStudentTable = studentTable.Find(item => item.name.Equals(getStringInput(), StringComparison.InvariantCultureIgnoreCase));
+                    inputUser = getStringInput();
+                    currStudentTable = studentTable.Find(item => item.name.Equals(inputUser, StringComparison.InvariantCultureIgnoreCase));
                     while (currStudentTable == null) {
                         Console.WriteLine("meja tidak ditemukan, input kembali sesuai daftar");
-                        currStudentTable = studentTable.Find(item => item.name.Equals(getStringInput(), StringComparison.InvariantCultureIgnoreCase));
+                        inputUser = getStringInput();
+                        currStudentTable = studentTable.Find(item => item.name.Equals(inputUser, StringComparison.InvariantCultureIgnoreCase));
                     }
 
                     //Mencari kursi yang akan digunakan
@@ -118,10 +123,12 @@ namespace BS.Inventory.App
                     foreach (Seat item in seat) {
                         Console.WriteLine(item.name);
                     }
-                    currSeat = seat.Find(item => item.name.Equals(getStringInput(), StringComparison.InvariantCultureIgnoreCase));
+                    inputUser = getStringInput();
+                    currSeat = seat.Find(item => item.name.Equals(inputUser, StringComparison.InvariantCultureIgnoreCase));
                     while (currSeat == null) {
-                        Console.WriteLine("meja tidak ditemukan, input kembali sesuai daftar");
-                        currSeat = seat.Find(item => item.name.Equals(getStringInput(), StringComparison.InvariantCultureIgnoreCase));
+                        Console.WriteLine("kursi tidak ditemukan, input kembali sesuai daftar");
+                        inputUser = getStringInput();
+                        currSeat = seat.Find(item => item.name.Equals(inputUser, StringComparison.InvariantCultureIgnoreCase));
                     }
 
                     maxColumn = CalcMaxColumn(currClassroom, currStudentTable);
@@ -144,7 +151,7 @@ namespace BS.Inventory.App
                     Console.Write("Input jumlah kursi yang akan di assign: ");
                     seatCount = getIntInput();
 
-                    drawClass(currClassroom, maxColumn, maxRow, currStudentTable.chairSlot);
+                    drawClass(currClassroom, maxColumn, maxRow, currStudentTable.chairSlot, currStudentTable.iconString, currSeat.iconString);
 
                 } else {
                     Console.WriteLine("Kelas tidak ditemukan");
@@ -152,12 +159,14 @@ namespace BS.Inventory.App
             }
         }
 
-        public static void drawClass(Classroom classroom, int maxColumn, int maxRow, int tableSeatSlot) {
+        public static void drawClass(Classroom classroom, int maxColumn, int maxRow, int tableSeatSlot, char tableIcon, char seatIcon) {
             int maxX = maxColumn * (tableSeatSlot + 2);
             int maxY = maxRow * 2;
             int teacherSpace = 3;
+            int tableInstance = tableSeatSlot + 2;
 
-            for(int i = 1; i <= maxX + 2; i++) {
+
+            for (int i = 1; i <= maxX + 2; i++) {
                 if(i == maxX + 2) {
                     Console.WriteLine("-");                    
                 } else {
@@ -166,23 +175,52 @@ namespace BS.Inventory.App
             }
 
             for (int i = 1; i <= teacherSpace; i++) {
-                if (i == teacherSpace) {
-                    Console.WriteLine("-");
-                } else if(i == 1){
-                    Console.Write("-");
-                }
+                for (int j = 1; j <= maxX + 2; j++) {
+                    if (j == maxX + 2) {
+                        Console.WriteLine("|");
+                    } else if (j == 1) {
+                        Console.Write("|");
+                    } else {
+                        Console.Write(" ");
+                    }
+                }                
             }
 
             for (int i = 1; i <= maxY; i++) {
+                int currTableInstance = 1;
                 for (int j = 1; j <= maxX + 2; j++) {
-                    int tableInstance = tableSeatSlot + 2;
-                    if (1 == i % 2) {
-
+                    if (j == maxX +2) {
+                        Console.WriteLine("|");
+                    } else if (j == 1) {
+                        Console.Write("|");
                     } else {
-
+                        if(currTableInstance == 1) {
+                            Console.Write(" ");
+                            currTableInstance++;
+                        }else if(currTableInstance <= 1 + tableSeatSlot) {
+                            if (1 == i % 2) {
+                                Console.Write(string.Format("{0}", tableIcon));                               
+                            }else {
+                                Console.Write(string.Format("{0}", seatIcon));
+                            }
+                            currTableInstance++;
+                        }else if(currTableInstance == tableInstance) {
+                            Console.Write(" ");
+                            currTableInstance = 1;
+                        }
                     }
+                    //if (1 == i % 2) {
+                    //} else {
+                    //}
                 }
+            }
 
+            for (int i = 1; i <= maxX + 2; i++) {
+                if (i == maxX + 2) {
+                    Console.WriteLine("-");
+                } else {
+                    Console.Write("-");
+                }
             }
 
         }
@@ -243,7 +281,9 @@ namespace BS.Inventory.App
 
 
         private static string getStringInput() {
-            string stringInput = Console.ReadLine();
+            string stringInput = string.Empty;
+            stringInput = Console.ReadLine();
+
             while (string.IsNullOrEmpty(stringInput)) {
                 Console.WriteLine("Ulangi input anda:");
                 stringInput = Console.ReadLine();
