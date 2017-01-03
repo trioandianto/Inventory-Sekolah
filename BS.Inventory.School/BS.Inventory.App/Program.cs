@@ -263,7 +263,7 @@ namespace BS.Inventory.App
         public static StudentTable getStudentTableDummy() {
             List<StudentTable> studentTableDummies = new List<StudentTable>();
 
-            // 15 Student Table
+            // 15 Student Tabl
             StudentTable newStudentTable = new StudentTable(1, "Meja murid kayu", new Point(1.5, 0.7));
             newStudentTable.itemCount = 10;
             newStudentTable.chairSlot = 2;
