@@ -24,6 +24,9 @@ namespace BS.Inventory.App
             newTeacherTable = new TeacherTable(2, "Meja Standar", new Point(1.5, 0.7));
             teacherTableDummies.Add(newTeacherTable);
             
+            newTeacherTable = new TeacherTable(3, "Meja Standar", new Point(1.5, 0.7));
+            teacherTableDummies.Add(newTeacherTable);
+            
             return teacherTableDummies;
         }
 
